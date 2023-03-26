@@ -20,11 +20,14 @@ import android.os.Handler
 import android.os.Looper
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
+import javax.inject.Inject
+import javax.inject.Singleton
 
 /**
  * Data manager class that handles data manipulation between the database and the UI.
  */
-class LoggerLocalDataSource(
+@Singleton
+class LoggerLocalDataSource @Inject constructor (
     private val logDao: LogDao
 ) {
 
